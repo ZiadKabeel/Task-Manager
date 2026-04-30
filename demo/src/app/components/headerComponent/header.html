@@ -1,0 +1,25 @@
+<header class="site-header">
+    <div class="page-container header-inner">
+        <a class="brand" routerLink="/Home" aria-label="Task Manager home">
+            <span class="brand-mark">TM</span>
+            <div>
+                <p class="brand-kicker">Daily Workflow</p>
+                <h1>Task Manager</h1>
+            </div>
+        </a>
+
+        <nav class="top-nav" aria-label="Primary navigation">
+            <a routerLink="/Home">Home</a>
+            <a routerLink="/add">Add Task</a>
+            <a routerLink="/lists">Task List</a>
+
+            @if (authService.currentUser()) {
+                <span class="welcome-pill" aria-live="polite">Welcome, {{ displayName() }}</span>
+                <button type="button" class="logout-btn" (click)="logout()">Logout</button>
+            } @else {
+                <a routerLink="/login">Login</a>
+                <a routerLink="/signup">Sign Up</a>
+            }
+        </nav>
+    </div>
+</header>

@@ -1,0 +1,53 @@
+<section class="task-form-shell surface-card">
+    <header class="task-form-header">
+        <p class="eyebrow">{{ isEditMode ? 'Edit mode' : 'Create mode' }}</p>
+        <h2>{{ isEditMode ? 'Update Task' : 'Add New Task' }}</h2>
+        <p>Capture the task details and keep your board organized.</p>
+    </header>
+
+    <div class="task-form-grid">
+        <label>
+            <span>Title</span>
+            <input type="text" placeholder="Task title" [(ngModel)]="task.title" />
+        </label>
+
+        <label>
+            <span>Priority</span>
+            <select name="priority" id="priority" [(ngModel)]="task.peririty">
+                <option value="" disabled>Select priority</option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+        </label>
+
+        <label>
+            <span>Due date</span>
+            <input type="date" [(ngModel)]="task.datetime" />
+        </label>
+
+        <label>
+            <span>Category</span>
+            <select name="category" id="category" [(ngModel)]="task.category">
+                <option value="" disabled>Select category</option>
+                <option value="work">Work</option>
+                <option value="personal">Personal</option>
+                <option value="study">Study</option>
+            </select>
+        </label>
+
+        <label>
+            <span>Tags</span>
+            <input type="text" placeholder="comma separated" [(ngModel)]="tagsText" />
+        </label>
+
+        <label>
+            <span>Description</span>
+            <textarea placeholder="Task description" [(ngModel)]="task.description"></textarea>
+        </label>
+    </div>
+
+    <button type="button" class="submit-btn" (click)="addTask()">
+        {{ isEditMode ? 'Save Edited Task' : 'Add Task' }}
+    </button>
+</section>

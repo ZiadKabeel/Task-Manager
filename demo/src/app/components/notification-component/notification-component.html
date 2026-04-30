@@ -1,0 +1,30 @@
+@if (notification.message) {
+    <div class="notification-container" aria-live="polite" aria-atomic="true">
+        <div
+            class="notification-toast"
+            role="status"
+            [class.type-success]="notification.type === 'success'"
+            [class.type-error]="notification.type === 'error'"
+            [class.type-warning]="notification.type === 'warning'"
+            [class.type-info]="notification.type === 'info'"
+        >
+            <p class="notification-title">
+                @switch (notification.type) {
+                    @case ('success') {
+                        Success
+                    }
+                    @case ('error') {
+                        Error
+                    }
+                    @case ('warning') {
+                        Warning
+                    }
+                    @default {
+                        Info
+                    }
+                }
+            </p>
+            <p class="notification-message">{{ notification.message }}</p>
+        </div>
+    </div>
+}

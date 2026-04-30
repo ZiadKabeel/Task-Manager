@@ -1,0 +1,49 @@
+<div class="image-slider-card">
+  <div class="image-slider" aria-label="Productivity image slider">
+    <button
+      type="button"
+      class="slider-control"
+      (click)="prevImage()"
+      aria-label="Previous image"
+    >
+      &#10094;
+    </button>
+
+    <figure class="slider-frame">
+      <img [src]="images[currentIndex]" alt="Productivity themed slide" />
+    </figure>
+
+    <button
+      type="button"
+      class="slider-control"
+      (click)="nextImage()"
+      aria-label="Next image"
+    >
+      &#10095;
+    </button>
+  </div>
+
+  <div class="dotsdev" role="tablist" aria-label="Slider pagination">
+    <button
+      type="button"
+      class="dot"
+      [class.active]="currentIndex === 0"
+      (click)="currentIndex = 0"
+      aria-label="Show first image"
+    ></button>
+    <button
+      type="button"
+      class="dot"
+      [class.active]="currentIndex === 1"
+      (click)="currentIndex = 1"
+      aria-label="Show second image"
+    ></button>
+    <button
+      type="button"
+      class="dot"
+      [class.active]="currentIndex === 2"
+      (click)="currentIndex = 2"
+      aria-label="Show third image"
+    ></button>
+  </div>
+</div>

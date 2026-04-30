@@ -1,0 +1,29 @@
+<nav class="tabs" aria-label="Task status filter">
+  <button
+    type="button"
+    class="tab"
+    [class.active]="nameoftab === 'all'"
+    [attr.aria-selected]="nameoftab === 'all'"
+    (click)="setTab('all')"
+  >
+    All Tasks
+  </button>
+  <button
+    type="button"
+    class="tab"
+    [class.active]="nameoftab === 'done'"
+    [attr.aria-selected]="nameoftab === 'done'"
+    (click)="setTab('done')"
+  >
+    Done
+  </button>
+  <button
+    type="button"
+    class="tab"
+    [class.active]="nameoftab === 'notdone'"
+    [attr.aria-selected]="nameoftab === 'notdone'"
+    (click)="setTab('notdone')"
+  >
+    Not Done
+  </button>
+</nav>

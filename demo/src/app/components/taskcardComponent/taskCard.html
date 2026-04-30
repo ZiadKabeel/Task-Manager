@@ -1,0 +1,48 @@
+<article class="task-card" [class.task-done]="task.done">
+    <header class="task-card-header">
+        <h3>{{ task.title }}</h3>
+        <span class="status-pill" [class.done]="task.done">
+            {{ task.done ? 'Done' : 'Pending' }}
+        </span>
+    </header>
+
+    <p class="task-description">{{ task.description }}</p>
+
+    <dl class="task-meta">
+        <div>
+            <dt>Priority</dt>
+            <dd
+                class="priority"
+                [class.priority-low]="task.peririty === 'low'"
+                [class.priority-medium]="task.peririty === 'medium'"
+                [class.priority-high]="task.peririty === 'high'"
+            >
+                {{ task.peririty || 'Unspecified' }}
+            </dd>
+        </div>
+        <div>
+            <dt>Due date</dt>
+            <dd>{{ task.datetime || 'Not set' }}</dd>
+        </div>
+        <div>
+            <dt>Category</dt>
+            <dd>{{ task.category || 'General' }}</dd>
+        </div>
+    </dl>
+
+    @if (task.tags.length > 0) {
+        <ul class="tag-list">
+            @for (tag of task.tags; track $index) {
+                <li>{{ tag }}</li>
+            }
+        </ul>
+    }
+
+    <div class="task-actions">
+        <button type="button" class="danger" (click)="deleteTask()">Delete</button>
+        <button type="button" class="secondary" (click)="editTask()">Edit</button>
+        <button type="button" class="success" (click)="maketaskdone()">
+            {{ task.done ? 'Mark Not Done' : 'Mark Done' }}
+        </button>
+    </div>
+</article>

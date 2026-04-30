@@ -1,0 +1,20 @@
+<section class="tasklist-shell">
+  <header class="tasklist-header">
+    <h2>Your Tasks</h2>
+    <p>Filter by status and stay on top of your priorities.</p>
+  </header>
+
+  <app-tabs-component></app-tabs-component>
+
+  @if (filteredTasks().length === 0) {
+    <p class="empty-state">No tasks found for this filter yet.</p>
+  } @else {
+    <ul class="task-grid">
+      @for (task of filteredTasks(); track $index) {
+        <li>
+          <app-taskcard [task]="task"></app-taskcard>
+        </li>
+      }
+    </ul>
+  }
+</section>

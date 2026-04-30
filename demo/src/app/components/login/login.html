@@ -1,0 +1,63 @@
+<section class="auth-layout">
+  <article class="auth-side surface-card">
+    <p class="eyebrow">Welcome Back</p>
+    <h2>Login to continue building momentum.</h2>
+    <p>Jump into your dashboard and finish what matters most today.</p>
+  </article>
+
+  <article class="auth-card surface-card">
+    <h3>Sign In</h3>
+    <form (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm" class="auth-form">
+      <label>
+        <span>Email</span>
+        <input
+          type="email"
+          id="email"
+          required
+          pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$"
+          [(ngModel)]="email"
+          name="email"
+          #emailModel="ngModel"
+          placeholder="you@example.com"
+        />
+      </label>
+      @if (!emailModel.valid && emailModel.touched && emailModel.control.errors?.['required']) {
+        <p class="error">Email is required.</p>
+      }
+      @if (!emailModel.valid && emailModel.touched && emailModel.control.errors?.['pattern']) {
+        <p class="error">Please enter a valid email format.</p>
+      }
+
+      <label>
+        <span>Password</span>
+        <input
+          type="password"
+          id="password"
+          minlength="6"
+          maxlength="12"
+          required
+          [(ngModel)]="password"
+          name="password"
+          #passwordModel="ngModel"
+          placeholder="Your password"
+        />
+      </label>
+      @if (!passwordModel.valid && passwordModel.touched && passwordModel.control.errors?.['required']) {
+        <p class="error">Password is required.</p>
+      }
+      @if (!passwordModel.valid && passwordModel.touched && passwordModel.control.errors?.['minlength']) {
+        <p class="error">Password must be at least 6 characters.</p>
+      }
+      @if (!passwordModel.valid && passwordModel.touched && passwordModel.control.errors?.['maxlength']) {
+        <p class="error">Password must be at most 12 characters.</p>
+      }
+
+      <button type="submit">Login</button>
+    </form>
+
+    <p class="auth-switch">
+      No account yet?
+      <a routerLink="/signup">Create one</a>
+    </p>
+  </article>
+</section>

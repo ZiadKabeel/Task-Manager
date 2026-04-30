@@ -1,0 +1,12 @@
+<div class="app-shell">
+	<app-notification-component [notification]="notification()"></app-notification-component>
+	<app-header></app-header>
+
+	<main class="app-main">
+		<div class="page-container">
+			<router-outlet></router-outlet>
+		</div>
+	</main>
+
+	<app-footer></app-footer>
+</div>

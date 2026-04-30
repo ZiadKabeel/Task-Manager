@@ -1,0 +1,73 @@
+<section class="auth-layout">
+    <article class="auth-side surface-card">
+        <p class="eyebrow">Get Started</p>
+        <h2>Create your account and organize work beautifully.</h2>
+        <p>
+            One account gives you quick task capture, smart filtering, and better focus each day.
+        </p>
+    </article>
+
+    <article class="auth-card surface-card">
+        <h3>Sign Up</h3>
+
+        <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="auth-form">
+            <label>
+                <span>Username</span>
+                <input type="text" id="username" name="username" formControlName="username" placeholder="Your name" />
+            </label>
+            @if (signupForm.controls['username'].touched && signupForm.controls['username'].errors?.['required']) {
+                <p class="error">Username is required.</p>
+            }
+            @if (signupForm.controls['username'].touched && signupForm.controls['username'].errors?.['minlength']) {
+                <p class="error">Username must be at least 3 characters.</p>
+            }
+
+            <label>
+                <span>Email</span>
+                <input type="email" id="email" name="email" formControlName="email" placeholder="you@example.com" />
+            </label>
+            @if (signupForm.controls['email'].touched && signupForm.controls['email'].errors?.['required']) {
+                <p class="error">Email is required.</p>
+            }
+            @if (signupForm.controls['email'].touched && signupForm.controls['email'].errors?.['email']) {
+                <p class="error">Please enter a valid email.</p>
+            }
+
+            <label>
+                <span>Password</span>
+                <input type="password" id="password" name="password" formControlName="password" placeholder="At least 6 characters" />
+            </label>
+            @if (signupForm.controls['password'].touched && signupForm.controls['password'].errors?.['required']) {
+                <p class="error">Password is required.</p>
+            }
+            @if (signupForm.controls['password'].touched && signupForm.controls['password'].errors?.['minlength']) {
+                <p class="error">Password must be at least 6 characters.</p>
+            }
+
+            <label>
+                <span>Confirm Password</span>
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    name="confirmPassword"
+                    formControlName="confirmPassword"
+                    placeholder="Repeat your password"
+                />
+            </label>
+            @if (signupForm.controls['confirmPassword'].touched && signupForm.controls['confirmPassword'].errors?.['required']) {
+                <p class="error">Confirm password is required.</p>
+            }
+
+            <button type="submit">Create Account</button>
+        </form>
+
+        @if (signupForm.errors?.['mismatch'] && signupForm.touched) {
+            <p class="error">Passwords do not match.</p>
+        }
+
+        <p class="auth-switch">
+            Already have an account?
+            <a href="/login">Login</a>
+        </p>
+    </article>
+</section>

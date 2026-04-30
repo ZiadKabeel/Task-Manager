@@ -1,0 +1,64 @@
+.notification-container {
+	position: fixed;
+	top: 1rem;
+	right: 1rem;
+	width: min(24rem, calc(100vw - 1.5rem));
+	z-index: 3000;
+	pointer-events: none;
+}
+
+.notification-toast {
+	margin: 0;
+	padding: 0.85rem 0.95rem;
+	border-radius: 14px;
+	border: 1px solid transparent;
+	box-shadow: var(--shadow-lift);
+	background: #fff;
+	color: var(--text);
+	pointer-events: auto;
+	animation: slide-in-right 0.35s ease-out;
+}
+
+.notification-title {
+	font-size: 0.82rem;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	font-weight: 800;
+}
+
+.notification-message {
+	margin-top: 0.22rem;
+	font-weight: 600;
+}
+
+.type-success {
+	background: #edf9f2;
+	border-color: #8fd0af;
+}
+
+.type-error {
+	background: #ffeef0;
+	border-color: #e7a1aa;
+}
+
+.type-warning {
+	background: #fff6e7;
+	border-color: #efc78f;
+}
+
+.type-info {
+	background: #ebf7fb;
+	border-color: #99cddd;
+}
+
+@keyframes slide-in-right {
+	from {
+		opacity: 0;
+		transform: translateX(24px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}

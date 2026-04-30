@@ -1,0 +1,287 @@
+{
+  "users": [
+    {
+      "username": "ziad",
+      "email": "zeyadkabeel99@gmail.com",
+      "password": "123456",
+      "id": "wGcXIkeluRg"
+    },
+    {
+      "username": "ziad",
+      "email": "ziad@gmail.com",
+      "password": "123456789",
+      "id": "rlYusQD4-V0"
+    },
+    {
+      "username": "ziad",
+      "email": "ziad@gmail.com",
+      "password": "123456",
+      "id": "yHlqsW-0j7c"
+    },
+    {
+      "username": "ziad",
+      "email": "ziadkabeel@gmail.com",
+      "password": "123456",
+      "id": "GMRdu3zcUZU"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Sample task",
+      "description": "This task is loaded from db.json",
+      "peririty": "medium",
+      "datetime": "2026-04-30",
+      "category": "work",
+      "tags": [
+        "sample",
+        "json-server"
+      ],
+      "done": true,
+      "isdeleted": true
+    },
+    {
+      "title": "task1",
+      "description": "task1",
+      "peririty": "medium",
+      "datetime": "2026-04-24",
+      "category": "personal",
+      "tags": [
+        "habjh"
+      ],
+      "done": false,
+      "isdeleted": true,
+      "id": "s33DJLfJ0YQ"
+    },
+    {
+      "title": "tjkk",
+      "description": "huahud",
+      "peririty": "medium",
+      "datetime": "2026-04-24",
+      "category": "personal",
+      "tags": [
+        "bhjj"
+      ],
+      "done": true,
+      "isdeleted": true,
+      "id": "_XzcPIveEGc"
+    },
+    {
+      "title": "task",
+      "description": "task1",
+      "peririty": "medium",
+      "datetime": "2026-04-24",
+      "category": "personal",
+      "tags": [
+        "js"
+      ],
+      "done": true,
+      "isdeleted": true,
+      "id": "YjNY5KsHbJY"
+    },
+    {
+      "title": "task1",
+      "description": "desc",
+      "peririty": "medium",
+      "datetime": "2026-04-24",
+      "category": "work",
+      "tags": [
+        "js"
+      ],
+      "done": true,
+      "isdeleted": true,
+      "id": "i3G7agwt9u0"
+    },
+    {
+      "title": "task1",
+      "description": "t1",
+      "peririty": "medium",
+      "datetime": "2026-04-24",
+      "category": "personal",
+      "tags": [
+        "js"
+      ],
+      "done": true,
+      "isdeleted": true,
+      "id": "jVfhPsMNfBY"
+    },
+    {
+      "title": "t1",
+      "description": "t1",
+      "peririty": "medium",
+      "datetime": "2026-04-24",
+      "category": "work",
+      "tags": [
+        "ghsvgh"
+      ],
+      "done": true,
+      "isdeleted": true,
+      "id": "aoiwo9L8mlo"
+    },
+    {
+      "title": "task",
+      "description": "task",
+      "peririty": "medium",
+      "datetime": "2026-04-24",
+      "category": "work",
+      "tags": [
+        "js"
+      ],
+      "done": true,
+      "isdeleted": true,
+      "id": "PWXWFHZyi_E"
+    },
+    {
+      "title": "task",
+      "description": "task",
+      "peririty": "low",
+      "datetime": "2026-04-24",
+      "category": "personal",
+      "tags": [
+        "sdbhvsd"
+      ],
+      "done": true,
+      "isdeleted": true,
+      "id": "r9cW9WBOsI4"
+    },
+    {
+      "title": "task",
+      "description": "task",
+      "peririty": "low",
+      "datetime": "2026-04-24",
+      "category": "personal",
+      "tags": [
+        "js"
+      ],
+      "done": true,
+      "isdeleted": true,
+      "id": "wM1U6olymhk"
+    },
+    {
+      "title": "angular task",
+      "description": "task desc",
+      "peririty": "high",
+      "datetime": "2026-04-24",
+      "category": "study",
+      "tags": [
+        "ts",
+        "html",
+        "css"
+      ],
+      "done": true,
+      "isdeleted": true,
+      "id": "pRwNmQO2zxs"
+    },
+    {
+      "title": "angular task",
+      "description": "task description",
+      "peririty": "high",
+      "datetime": "2026-04-24",
+      "category": "study",
+      "tags": [
+        "ts",
+        "html",
+        "css"
+      ],
+      "done": false,
+      "isdeleted": true,
+      "id": "vclVBLPNUxY"
+    },
+    {
+      "title": "task1",
+      "description": "task desc",
+      "peririty": "high",
+      "datetime": "2026-04-24",
+      "category": "study",
+      "tags": [
+        "js",
+        "ts",
+        "html"
+      ],
+      "done": false,
+      "isdeleted": true,
+      "id": "Hr1hS-T3z-o"
+    },
+    {
+      "title": "task 1",
+      "description": "task desc",
+      "peririty": "medium",
+      "datetime": "2026-04-26",
+      "category": "work",
+      "tags": [
+        "ts",
+        "js"
+      ],
+      "done": true,
+      "isdeleted": true,
+      "id": "M9LfjGfsnw8"
+    },
+    {
+      "title": "task 1",
+      "description": "task desc",
+      "peririty": "medium",
+      "datetime": "2026-04-26",
+      "category": "work",
+      "tags": [
+        "ts",
+        "js"
+      ],
+      "done": true,
+      "isdeleted": true,
+      "id": "ejxsRHWpMRQ"
+    },
+    {
+      "title": "task1",
+      "description": "desc",
+      "peririty": "medium",
+      "datetime": "2026-04-26",
+      "category": "study",
+      "tags": [
+        "ts"
+      ],
+      "done": true,
+      "isdeleted": true,
+      "id": "cRh9k14RgNE"
+    },
+    {
+      "title": "angular",
+      "description": "desc",
+      "peririty": "medium",
+      "datetime": "2026-04-26",
+      "category": "study",
+      "tags": [
+        "ts"
+      ],
+      "done": true,
+      "isdeleted": true,
+      "id": "XrMpiyQxyc0"
+    },
+    {
+      "title": "task1",
+      "description": "desc",
+      "peririty": "medium",
+      "datetime": "2026-04-26",
+      "category": "study",
+      "tags": [
+        "js"
+      ],
+      "done": true,
+      "isdeleted": true,
+      "id": "0qlan4JElmg"
+    },
+    {
+      "title": "angular",
+      "description": "desc",
+      "peririty": "medium",
+      "datetime": "2026-04-26",
+      "category": "study",
+      "tags": [
+        "js"
+      ],
+      "done": true,
+      "isdeleted": true,
+      "id": "qLSYUhD77iQ"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
